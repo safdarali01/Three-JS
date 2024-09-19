@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>My first three.js app</title>
+    <!-- The metadata of the document -->
+    <meta charset="utf-8" /> <!-- Sets the character encoding to UTF-8 for supporting a wide range of characters -->
+    <title>My first three.js app</title> <!-- The title that appears in the browser tab -->
+
+    <!-- Inline CSS to style the webpage -->
     <style>
+      /* Apply default margin, padding, and box-sizing to all elements */
       * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        margin: 0; /* Remove default margin from all elements */
+        padding: 0; /* Remove default padding from all elements */
+        box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
       }
     </style>
   </head>
+
   <body>
+    <!-- Import Map for JavaScript modules -->
+    <!-- This allows you to specify how modules are imported within your project -->
     <script type="importmap">
       {
         "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
+          "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js", 
+          /* Import the core three.js module from a CDN (Content Delivery Network) */
           "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+          /* Specify the path for additional three.js addons, such as controls and loaders */
         }
       }
     </script>
+
+    <!-- Import the main JavaScript module -->
+    <!-- This script will be your main.js file where the 3D scene setup and rendering happen -->
     <script type="module" src="main.js"></script>
   </body>
 </html>
